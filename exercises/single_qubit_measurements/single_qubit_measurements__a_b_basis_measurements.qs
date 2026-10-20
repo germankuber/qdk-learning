@@ -1,7 +1,11 @@
 namespace Kata {
     operation MeasureInABBasis(alpha : Double, q : Qubit) : Result {
-        // Implement your solution here...
+        Rx(-2.0 * alpha, q);
 
-        return Zero;
+        let result = M(q);
+
+        Rx(2.0 * alpha, q);
+
+        return result;
     }
 }

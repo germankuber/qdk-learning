@@ -2,8 +2,10 @@ namespace Kata {
     import Std.Math.*;
 
     operation IsQubitPsiPlus(q : Qubit) : Bool {
-        // Implement your solution here...
+        let theta = 2.0 * ArcTan2(0.8, 0.6);
 
-        return false;
+        Ry(-theta, q);
+
+        return M(q) == Zero;
     }
 }

@@ -1,7 +1,7 @@
 namespace Kata {
     operation IsQubitA(alpha : Double, q : Qubit) : Bool {
-        // Implement your solution here...
+        Rx(-2.0 * alpha, q);
 
-        return false;
+        return M(q) == Zero;
     }
 }
